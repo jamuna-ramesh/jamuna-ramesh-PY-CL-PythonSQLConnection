@@ -10,8 +10,11 @@ class Lab:
     def connect_to_database(self):
 
         try:
+            database = "test.db"
             print("Connecting to database...")
-            return "TODO: Connect to database"
+            conn = sqlite3.connect(database)
+            #print("Connected to database")
+            return conn
         except Exception as e:
             print(f"Failed to connect to database, with Exception: {e}")
             return None
